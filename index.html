@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body style="margin-top: 50px; padding: 100px;">
+  
+  <fieldset>
+    <legend>Tritium Networks Standard Logo (white, lite)</legend>
+    <div class="bg whiteBg">
+      <span class="logo-w-text logo-w-accent">T</span>
+      <span class="logo-w-text logo-w-accent">r</span>
+      <span class="logo-w-text logo-w-accent">i</span>
+      <span class="logo-w-text">N</span>
+      <span class="logo-w-text">e</span>
+      <span class="logo-w-text">t</span>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Tritium Networks Standard Logo (colored, lite)</legend>
+    <div class="bg coloredBg">
+        <span class="logo-c-text logo-c-accent">T</span>
+        <span class="logo-c-text logo-c-accent">r</span>
+        <span class="logo-c-text logo-c-accent">i</span>
+        <span class="logo-c-text">N</span>
+        <span class="logo-c-text">e</span>
+        <span class="logo-c-text">t</span>
+    </div>
+  </fieldset>
+
+  <style>
+    .bg {
+      display: flex;
+      font-family: 'Jua', sans-serif;
+      height: 100px;
+      padding: 200px 30px 10px;
+      font-size: 100px;
+    }
+
+    .whiteBg {
+      color: #6bedd400;
+      -webkit-text-stroke: 4px #6bedd4;
+    }
+
+    .coloredBg {
+      color: #ffffff00;
+      -webkit-text-stroke: 4px #ffffff;
+      background-color: #6bedd4;
+    }
+  </style>
+
+  <script>
+    window.onload = () => {
+      anime.timeline()
+        .add({ targets: '.logo-w-text', translateY: '-100px' })
+        .add({ targets: '.logo-w-accent', color: '#6bedd4' }, '-=700')
+  
+      anime.timeline()
+        .add({ targets: '.logo-c-text', translateY: '-100px' })
+        .add({ targets: '.logo-c-accent', color: '#ffffff' }, '-=700')
+    }
+  </script>
+</body>
+</html>
