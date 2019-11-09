@@ -34,6 +34,50 @@
     </div>
   </fieldset>
 
+  <fieldset>
+    <legend>Tritium Networks Animation Logo (white)</legend>
+    <div class="bg whiteBg center">
+        <span class="logo-a-text logo-a-accent">T</span>
+        <span class="logo-a-text logo-a-accent">r</span>
+        <span class="logo-a-text logo-a-accent">i</span>
+        <span class="logo-a-text logo-a-extend-text">t</span>
+        <span class="logo-a-text logo-a-extend-text">i</span>
+        <span class="logo-a-text logo-a-extend-text">u</span>
+        <span class="logo-a-text logo-a-extend-text">m</span>
+        <span class="logo-a-text logo-a-extend-text">&nbsp;</span>
+        <span class="logo-a-text logo-a-accent">N</span>
+        <span class="logo-a-text logo-a-accent">e</span>
+        <span class="logo-a-text logo-a-accent">t</span>
+        <span class="logo-a-text logo-a-extend-text">w</span>
+        <span class="logo-a-text logo-a-extend-text">o</span>
+        <span class="logo-a-text logo-a-extend-text">r</span>
+        <span class="logo-a-text logo-a-extend-text">k</span>
+        <span class="logo-a-text logo-a-extend-text">s</span>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Tritium Networks Animation Logo (colored)</legend>
+    <div class="bg coloredBg center">
+        <span class="logo-ac-text logo-ac-accent">T</span>
+        <span class="logo-ac-text logo-ac-accent">r</span>
+        <span class="logo-ac-text logo-ac-accent">i</span>
+        <span class="logo-ac-text logo-ac-extend-text">t</span>
+        <span class="logo-ac-text logo-ac-extend-text">i</span>
+        <span class="logo-ac-text logo-ac-extend-text">u</span>
+        <span class="logo-ac-text logo-ac-extend-text">m</span>
+        <span class="logo-ac-text logo-ac-extend-text">&nbsp;</span>
+        <span class="logo-ac-text logo-ac-accent">N</span>
+        <span class="logo-ac-text logo-ac-accent">e</span>
+        <span class="logo-ac-text logo-ac-accent">t</span>
+        <span class="logo-ac-text logo-ac-extend-text">w</span>
+        <span class="logo-ac-text logo-ac-extend-text">o</span>
+        <span class="logo-ac-text logo-ac-extend-text">r</span>
+        <span class="logo-ac-text logo-ac-extend-text">k</span>
+        <span class="logo-ac-text logo-ac-extend-text">s</span>
+    </div>
+  </fieldset>
+
   <style>
     .bg {
       display: flex;
@@ -45,13 +89,21 @@
 
     .whiteBg {
       color: #6bedd400;
-      -webkit-text-stroke: 4px #6bedd4;
+      -webkit-text-stroke: 2px #6bedd4;
     }
 
     .coloredBg {
       color: #ffffff00;
-      -webkit-text-stroke: 4px #ffffff;
+      -webkit-text-stroke: 2px #ffffff;
       background-color: #6bedd4;
+    }
+
+    .logo-a-extend-text {
+      font-size: 0px;
+    }
+
+    .logo-ac-extend-text {
+      font-size: 0px;
     }
   </style>
 
@@ -64,6 +116,20 @@
       anime.timeline()
         .add({ targets: '.logo-c-text', translateY: '-100px' })
         .add({ targets: '.logo-c-accent', color: '#ffffff' }, '-=700')
+
+
+      anime.timeline()
+        .add({ duration: 300, easing: 'easeOutCirc', targets: '.logo-a-text', translateY: '-200px' })
+        .add({ easing: 'easeOutBounce', targets: '.logo-a-text', translateY: '0px' })
+        .add({ duration: 130, easing: 'easeOutQuart', targets: '.logo-a-accent', color: '#6bedd4'  }, 1000)
+        .add({ easing: 'easeOutElastic', targets: '.logo-a-text', fontSize: '70px' }, 800)
+
+
+      anime.timeline()
+        .add({ duration: 300, easing: 'easeOutCirc', targets: '.logo-ac-text', translateY: '-200px' })
+        .add({ easing: 'easeOutBounce', targets: '.logo-ac-text', translateY: '0px' })
+        .add({ duration: 130, easing: 'easeOutQuart', targets: '.logo-ac-accent', color: '#ffffff'  }, 1000)
+        .add({ easing: 'easeOutElastic', targets: '.logo-ac-text', fontSize: '70px' }, 800)
     }
   </script>
 </body>
